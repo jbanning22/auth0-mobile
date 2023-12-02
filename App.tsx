@@ -9,16 +9,16 @@ const Stack = createNativeStackNavigator();
 
 function App() {
   return (
-    <Auth0Provider
-      domain={'dev-m6cct5o8oexmffxu.us.auth0.com'}
-      clientId={'vXA93ALYnQWKQP1KHJeHJ1tofhlL3T2N'}>
-      <NavigationContainer>
+    <NavigationContainer>
+      <Auth0Provider
+        domain={'dev-m6cct5o8oexmffxu.us.auth0.com'}
+        clientId={'cQVvYuq3H8iiROXl8VwYBJzCIYaCUnvO'}>
         <Stack.Navigator>
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Home" component={HomeScreen} />
         </Stack.Navigator>
-      </NavigationContainer>
-    </Auth0Provider>
+      </Auth0Provider>
+    </NavigationContainer>
   );
 }
 

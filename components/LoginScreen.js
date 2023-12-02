@@ -1,13 +1,19 @@
 import React from 'react';
 import {View, Text, Button} from 'react-native';
 import {useAuth0} from 'react-native-auth0';
+import {useNavigation} from '@react-navigation/native';
 
 const LoginScreen = ({navigation}) => {
   const {authorize} = useAuth0();
 
   const onPress = async () => {
     try {
-      await authorize();
+      const credentials = await authorize({
+        scope: 'openid profile email',
+        // audience:
+      });
+      console.log(credentials);
+      navigation.navigate('Home');
     } catch (e) {
       console.log(e);
     }
