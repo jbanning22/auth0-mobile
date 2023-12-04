@@ -11,8 +11,8 @@ function App() {
   return (
     <NavigationContainer>
       <Auth0Provider
-        domain={'dev-m6cct5o8oexmffxu.us.auth0.com'}
-        clientId={'cQVvYuq3H8iiROXl8VwYBJzCIYaCUnvO'}>
+        domain={'dev-sncb132t.us.auth0.com'}
+        clientId={'goRWbzgluLdirz8KLDc5ADBTyT99sJcO'}>
         <Stack.Navigator>
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="Home" component={HomeScreen} />
